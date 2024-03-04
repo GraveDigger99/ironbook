@@ -6004,12 +6004,16 @@
     }));
     document.addEventListener("DOMContentLoaded", (function() {
         const configurators = document.querySelectorAll(".slide-configurator");
+        console.log(configurators);
         function handleSelectButtonClick(event) {
             const configurator = event.currentTarget.closest(".slide-configurator");
             console.log(configurator);
             const selectButton = configurator.querySelector(".slide-configurator__select-button");
+            console.log(selectButton);
             const clearButton = configurator.querySelector(".slide-configurator__clear-button");
+            console.log(clearButton);
             const actionsBlock = configurator.querySelector(".slide-configurator__actions");
+            console.log(actionsBlock);
             event.stopPropagation();
             if (!configurator.classList.contains("clicked")) {
                 configurator.classList.add("clicked");
@@ -6023,6 +6027,7 @@
             const selectButton = configurator.querySelector(".slide-configurator__select-button");
             const clearButton = configurator.querySelector(".slide-configurator__clear-button");
             const actionsBlock = configurator.querySelector(".slide-configurator__actions");
+            event.stopPropagation();
             configurator.classList.remove("clicked");
             clearButton.style.display = "none";
             selectButton.style.display = "inline-block";
@@ -6034,20 +6039,6 @@
             configurator.querySelector(".slide-configurator__actions");
             if (!isMobile()) selectButton.addEventListener("click", handleSelectButtonClick); else configurator.addEventListener("click", handleSelectButtonClick);
             clearButton.addEventListener("click", handleClearButtonClick);
-            configurator.addEventListener("click", (function(event) {
-                const isAnotherConfigurator = event.target.closest(".slide-configurator");
-                if (!isAnotherConfigurator) configurators.forEach((function(otherConfigurator) {
-                    if (otherConfigurator !== configurator) {
-                        const otherSelectButton = otherConfigurator.querySelector(".slide-configurator__select-button");
-                        const otherClearButton = otherConfigurator.querySelector(".slide-configurator__clear-button");
-                        const otherActionsBlock = otherConfigurator.querySelector(".slide-configurator__actions");
-                        otherConfigurator.classList.remove("clicked");
-                        otherClearButton.style.display = "none";
-                        otherSelectButton.style.display = "inline-block";
-                        otherActionsBlock.classList.remove("hovered");
-                    }
-                }));
-            }));
         }));
         function isMobile() {
             return window.innerWidth <= 767;
