@@ -5861,8 +5861,7 @@
             breakpoints: {
                 320: {
                     slidesPerView: 1.6,
-                    spaceBetween: 16,
-                    autoHeight: true
+                    spaceBetween: 16
                 },
                 479: {
                     slidesPerView: 2.5,
@@ -6007,6 +6006,7 @@
         const configurators = document.querySelectorAll(".slide-configurator");
         function handleSelectButtonClick(event) {
             const configurator = event.currentTarget.closest(".slide-configurator");
+            console.log(configurator);
             const selectButton = configurator.querySelector(".slide-configurator__select-button");
             const clearButton = configurator.querySelector(".slide-configurator__clear-button");
             const actionsBlock = configurator.querySelector(".slide-configurator__actions");
