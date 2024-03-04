@@ -252,6 +252,15 @@ h6 {
 Снипет (HTML): cnt
 */
 
+.progress-circle circle {
+	cx: var(--half-size);
+	cy: var(--half-size);
+	r: var(--radius);
+	stroke-width: var(--stroke-width);
+	fill: none;
+	stroke-linecap: round;
+}
+
 [class*=__container] {
   max-width: 77.875rem;
   margin: 0 auto;
