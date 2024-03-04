@@ -6023,7 +6023,6 @@
             const selectButton = configurator.querySelector(".slide-configurator__select-button");
             const clearButton = configurator.querySelector(".slide-configurator__clear-button");
             const actionsBlock = configurator.querySelector(".slide-configurator__actions");
-            event.stopPropagation();
             configurator.classList.remove("clicked");
             clearButton.style.display = "none";
             selectButton.style.display = "inline-block";
