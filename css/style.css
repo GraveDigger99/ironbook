@@ -1811,7 +1811,16 @@ input[type=number] {
   --dash: calc((var(--progress) * var(--circumference)) / 100);
 }
 
-.progress-circle circle {
+.bg {
+  cx: var(--half-size);
+  cy: var(--half-size);
+  r: var(--radius);
+  stroke-width: var(--stroke-width);
+  fill: none;
+  stroke-linecap: round;
+}
+
+.fg {
   cx: var(--half-size);
   cy: var(--half-size);
   r: var(--radius);
