@@ -281,6 +281,17 @@ h6 {
   border: 0.0625rem solid var(--blue);
 }
 
+
+.progress-circle circle {
+	cx: var(--half-size);
+	cy: var(--half-size);
+	r: var(--radius);
+	stroke-width: var(--stroke-width);
+	fill: none;
+	stroke-linecap: round;
+}
+
+
 .button._fw {
   width: 100%;
 }
@@ -2780,16 +2791,6 @@ input[type=number] {
   text-align: left;
 }
 
-
-.progress-circle circle {
-	cx: var(--half-size);
-	cy: var(--half-size);
-	r: var(--radius);
-	stroke-width: var(--stroke-width);
-	fill: none;
-	stroke-linecap: round;
-}
-
 .item-configurator__input {
   text-align: center;
   height: 3rem;
@@ -3135,30 +3136,6 @@ input[type=number] {
 @media (min-width: 51em) {
   .header {
     padding-bottom: 1.875rem;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .slide-configurator:hover .slide-configurator__info {
-    display: none;
-    /* Hide info during hover on mobile devices */
-  }
-
-  .slide-configurator:hover .slide-configurator__actions {
-    display: none;
-    /* Hide actions during hover on mobile devices */
-  }
-
-  .slide-configurator:hover.clicked .slide-configurator__actions {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    /* Display actions when clicked and hovered on mobile devices */
-  }
-
-  .slide-configurator:hover .slide-configurator__clear-button {
-    display: none;
-    /* Hide clear button during hover on mobile devices */
   }
 }
 
@@ -4277,4 +4254,3 @@ input[type=number] {
     border: 0.0625rem solid var(--blue);
   }
 }
-
