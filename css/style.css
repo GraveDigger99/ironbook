@@ -281,17 +281,6 @@ h6 {
   border: 0.0625rem solid var(--blue);
 }
 
-
-.progress-circle circle {
-	cx: var(--half-size);
-	cy: var(--half-size);
-	r: var(--radius);
-	stroke-width: var(--stroke-width);
-	fill: none;
-	stroke-linecap: round;
-}
-
-
 .button._fw {
   width: 100%;
 }
@@ -348,9 +337,12 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 0.0625rem solid var(--blue);
   border-radius: 0.25rem;
-  padding: 0.96875rem 1rem;
+  padding: 1rem 1rem;
   color: var(--blue);
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
@@ -553,6 +545,16 @@ textarea.input {
           flex-grow: 1;
   gap: 1rem;
 }
+
+.progress-circle circle {
+	cx: var(--half-size);
+	cy: var(--half-size);
+	r: var(--radius);
+	stroke-width: var(--stroke-width);
+	fill: none;
+	stroke-linecap: round;
+}
+
 
 .checkbox {
   position: relative;
@@ -2752,7 +2754,7 @@ input[type=number] {
 }
 
 .item-configurator__button {
-  border: 1px solid var(--blue);
+  border: 0.0625rem solid var(--blue);
   border-radius: 4px;
   padding: 16px;
   color: var(--blue);
@@ -2972,11 +2974,11 @@ input[type=number] {
   }
 
   .delete-btn {
-    width: 3rem;
-    height: 3rem;
+    width: 3.0625rem;
+    height: 3.0625rem;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 3rem;
-            flex: 0 0 3rem;
+        -ms-flex: 0 0 3.0625rem;
+            flex: 0 0 3.0625rem;
   }
 
   .change-btn {
