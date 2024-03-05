@@ -2096,59 +2096,6 @@
         return api;
     }
     function rangeInit() {
-        const rangeItems = document.querySelectorAll("[data-range]");
-        if (rangeItems.length) rangeItems.forEach((rangeItem => {
-            const fromValue = document.querySelector("[data-range-from]");
-            const toValue = document.querySelector("[data-range-to");
-            var inputs = [ fromValue, toValue ];
-            const item = document.querySelector("[data-range-item]");
-            initialize(item, {
-                start: [ Number(fromValue.value), Number(toValue.value) ],
-                connect: true,
-                tooltips: [ true, true ],
-                format: {
-                    from: function(value) {
-                        return parseInt(value);
-                    },
-                    to: function(value) {
-                        return parseInt(value);
-                    }
-                },
-                range: {
-                    min: [ Number(fromValue.dataset.rangeFrom) ],
-                    max: [ Number(toValue.dataset.rangeTo) ]
-                }
-            });
-            inputs.forEach((function(input, handle) {
-                input.addEventListener("change", (function() {
-                    item.noUiSlider.setHandle(handle, this.value);
-                }));
-                input.addEventListener("keydown", (function(e) {
-                    var values = item.noUiSlider.get();
-                    var value = Number(values[handle]);
-                    var steps = item.noUiSlider.steps();
-                    var step = steps[handle];
-                    var position;
-                    switch (e.which) {
-                      case 13:
-                        item.noUiSlider.setHandle(handle, this.value);
-                        break;
-
-                      case 38:
-                        position = step[1];
-                        if (position === false) position = 1;
-                        if (position !== null) item.noUiSlider.setHandle(handle, value + position);
-                        break;
-
-                      case 40:
-                        position = step[0];
-                        if (position === false) position = 1;
-                        if (position !== null) item.noUiSlider.setHandle(handle, value - position);
-                        break;
-                    }
-                }));
-            }));
-        }));
         const totalItems = document.querySelectorAll("[data-total]");
         if (totalItems.length) totalItems.forEach((totalItem => {
             const fromValueTotal = document.querySelector("[data-total-from]");
@@ -2170,6 +2117,62 @@
                 range: {
                     min: [ Number(fromValueTotal.dataset.totalFrom) ],
                     max: [ Number(toValueTotal.dataset.totalTo) ]
+                }
+            });
+            itemTotal.noUiSlider.on("update", (function(values, handle) {
+                inputsTotal[handle].value = values[handle];
+            }));
+            inputsTotal.forEach((function(inputTotal, handle) {
+                inputTotal.addEventListener("change", (function() {
+                    itemTotal.noUiSlider.setHandle(handle, this.value);
+                }));
+                itemTotal.addEventListener("keydown", (function(e) {
+                    var values = itemTotal.noUiSlider.get();
+                    var value = Number(values[handle]);
+                    var steps = itemTotal.noUiSlider.steps();
+                    var step = steps[handle];
+                    var position;
+                    switch (e.which) {
+                      case 13:
+                        itemTotal.noUiSlider.setHandle(handle, this.value);
+                        break;
+
+                      case 38:
+                        position = step[1];
+                        if (position === false) position = 1;
+                        if (position !== null) itemTotal.noUiSlider.setHandle(handle, value + position);
+                        break;
+
+                      case 40:
+                        position = step[0];
+                        if (position === false) position = 1;
+                        if (position !== null) itemTotal.noUiSlider.setHandle(handle, value - position);
+                        break;
+                    }
+                }));
+            }));
+        }));
+        const totalItems2 = document.querySelectorAll("[data-total2]");
+        if (totalItems2.length) totalItems2.forEach((totalItem => {
+            const fromValueTotal = document.querySelector("[data-total-from2]");
+            const toValueTotal = document.querySelector("[data-total-to2]");
+            const itemTotal = document.querySelector("[data-total-item2]");
+            var inputsTotal = [ fromValueTotal, toValueTotal ];
+            initialize(itemTotal, {
+                start: [ Number(fromValueTotal.value), Number(toValueTotal.value) ],
+                connect: true,
+                tooltips: [ true, true ],
+                format: {
+                    from: function(value) {
+                        return parseInt(value);
+                    },
+                    to: function(value) {
+                        return parseInt(value);
+                    }
+                },
+                range: {
+                    min: [ Number(fromValueTotal.dataset.totalFrom2) ],
+                    max: [ Number(toValueTotal.dataset.totalTo2) ]
                 }
             });
             itemTotal.noUiSlider.on("update", (function(values, handle) {
@@ -6196,6 +6199,14 @@
         }));
     }
     initComputerBuilder();
+    const filterBtnOpen = document.querySelector(".filter-btn");
+    const filterBtnClose = document.querySelector(".aside-processors__close");
+    filterBtnOpen.addEventListener("click", (function(e) {
+        document.documentElement.classList.add("filter-open");
+    }));
+    filterBtnClose.addEventListener("click", (function(e) {
+        document.documentElement.classList.remove("filter-open");
+    }));
     window["FLS"] = false;
     isWebp();
     menuInit();

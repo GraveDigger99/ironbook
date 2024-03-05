@@ -5,7 +5,7 @@
 	<title>HomePage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240304151158">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240305143223">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -457,7 +457,7 @@
 									</div>
 									<!-- aside-configurator__bottom -->
 									<div data-da=".aside-configurator__actions, 767.98,last" class="aside-configurator__bottom">
-										<button type="button" class="aside-configurator__expert-btn expert-btn">
+										<button data-popup="#popup-expert" type="button" class="aside-configurator__expert-btn expert-btn">
 											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M6.35078 16L1.6247 19.7809C0.969932 20.3047 0 19.8385 0 19V3C0 1.34315 1.34315 0 3 0H17C18.6569 0 20 1.34315 20 3V13C20 14.6569 18.6569 16 17 16H6.35078ZM2 16.9194L5.37531 14.2191C5.55262 14.0773 5.77293 14 6 14H17C17.5523 14 18 13.5523 18 13V3C18 2.44772 17.5523 2 17 2H3C2.44772 2 2 2.44772 2 3V16.9194Z" fill="#151528" />
 											</svg>
@@ -479,93 +479,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- info -->
-				<div class="detail-info">
-					<button type="button" class="detail-info__close">
-						<img src="img/icons/close.svg" alt="icon: close">
-					</button>
-					<div class="detail-info__slider swiper">
-						<div class="detail-info__wrapper swiper-wrapper">
-							<div class="detail-info__slide swiper-slide slide-detail">
-								<div class="slide-detail__image">
-									<picture><source srcset="img/processors/main-slider.webp" type="image/webp"><img src="img/processors/main-slider.jpg" alt="image"></picture>
-								</div>
-							</div>
-							<div class="detail-info__slide swiper-slide slide-detail">
-								<div class="slide-detail__image">
-									<picture><source srcset="img/testing/1300x200.webp" type="image/webp"><img src="img/testing/1300x200.jpg" alt="image"></picture>
-								</div>
-							</div>
-							<div class="detail-info__slide swiper-slide slide-detail">
-								<div class="slide-detail__image">
-									<picture><source srcset="img/testing/400x600.webp" type="image/webp"><img src="img/testing/400x600.jpg" alt="image"></picture>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-pagination"></div>
-					</div>
-					<div class="detail-info__name">Процессор AMD Ryzen 9 7950X OEM</div>
-					<div data-tabs class="tabs">
-						<nav data-tabs-titles class="tabs__navigation">
-							<button type="button" class="tabs__title _tab-active">Характеристики</button>
-							<button type="button" class="tabs__title">Описание</button>
-						</nav>
-						<div data-tabs-body class="tabs__content">
-							<div class="tabs__body">
-								<div class="tabs__items">
-									<div class="tabs__item">
-										<div class="tabs__label">
-											Сокет
-										</div>
-										<div class="tabs__value">
-											AM5
-										</div>
-									</div>
-									<div class="tabs__item">
-										<div class="tabs__label">
-											Ядро
-										</div>
-										<div class="tabs__value">
-											RaphaeleAM5
-										</div>
-									</div>
-									<div class="tabs__item">
-										<div class="tabs__label">
-											Количество ядер
-										</div>
-										<div class="tabs__value">
-											16
-										</div>
-									</div>
-									<div class="tabs__item">
-										<div class="tabs__label">
-											Тактовая частота
-										</div>
-										<div class="tabs__value">
-											5100 Мгц
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="tabs__body">
-								<p class="tabs__text">
-									Процессор AMD Ryzen 9 7950X – мощный чипсет для игровых компьютеров и рабочих станций
-									профессионального
-									уровня.
-									Обработка до 32 вычислительных потоков одновременно обеспечивает высокую производительность
-									устройства
-									для молниеносного
-									запуска любых программ и комфортной работы.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="detail-info__price-block">
-						<span class="detail-info__price">18 000 ₽</span>
-						<a href="#" class="detail-info__button button">Добавить</a>
-					</div>
-				</div>
-				<!-- info -->
 			</section>
 			<section class="info-section">
 				<div class="info-section__container">
@@ -767,16 +680,132 @@
 			</div>
 		</footer>
 	</div>
-	<!-- <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
+	<div id="popup-expert" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup-expert">
+					<h1 class="popup-expert__title title">Мнение эксперта</h1>
+					<button data-close type="button" class="popup__close close-modal">
+						<img src="img/icons/close.svg" alt="icon: Close">
+					</button>
+					<div class="popup-expert__body">
+						<div class="popup-expert__top">
+							<div class="popup-expert__label">Для каких задач</div>
+							<ul class="popup-expert__list">
+								<li>
+									<div class="tag">
+										<input id="c_211" data-error="Ошибка" class="tag__input" type="checkbox" value="1" name="form[]">
+										<label for="c_211" class="tag__label"><span class="tag__text">Игры</span></label>
+									</div>
+								</li>
+								<li>
+									<div class="tag">
+										<input id="c_212" data-error="Ошибка" class="tag__input" type="checkbox" value="1" name="form[]">
+										<label for="c_212" class="tag__label"><span class="tag__text">Видео монтаж</span></label>
+									</div>
+								</li>
+								<li>
+									<div class="tag">
+										<input id="c_213" data-error="Ошибка" class="tag__input" type="checkbox" value="1" name="form[]">
+										<label for="c_213" class="tag__label"><span class="tag__text">Работа с фото</span></label>
+									</div>
+								</li>
+								<li>
+									<div class="tag">
+										<input id="c_214" data-error="Ошибка" class="tag__input" type="checkbox" value="1" name="form[]">
+										<label for="c_214" class="tag__label"><span class="tag__text">Работа в САПР</span></label>
+									</div>
+								</li>
+								<li>
+									<div class="tag">
+										<input id="c_215" data-error="Ошибка" class="tag__input" type="checkbox" value="1" name="form[]">
+										<label for="c_215" class="tag__label"><span class="tag__text">3D моделирование</span></label>
+									</div>
+								</li>
+								<li>
+									<div class="tag">
+										<input id="c_216" data-error="Ошибка" class="tag__input" type="checkbox" value="1" name="form[]">
+										<label for="c_216" class="tag__label"><span class="tag__text">Программирование</span></label>
+									</div>
+								</li>
+								<li>
+									<div class="tag">
+										<input id="c_217" data-error="Ошибка" class="tag__input" type="checkbox" value="1" name="form[]">
+										<label for="c_217" class="tag__label"><span class="tag__text">Работа в 1С</span></label>
+									</div>
+								</li>
+								<li>
+									<div class="tag">
+										<input id="c_218" data-error="Ошибка" class="tag__input" type="checkbox" value="1" name="form[]">
+										<label for="c_218" class="tag__label"><span class="tag__text">Работа с офисными
+												приложениями</span></label>
+									</div>
+								</li>
+								<li>
+									<div class="tag">
+										<input id="c_219" data-error="Ошибка" class="tag__input" type="checkbox" value="1" name="form[]">
+										<label for="c_219" class="tag__label"><span class="tag__text">Сервер для 1С</span></label>
+									</div>
+								</li>
+								<li>
+									<div class="tag">
+										<input id="c_220" data-error="Ошибка" class="tag__input" type="checkbox" value="1" name="form[]">
+										<label for="c_220" class="tag__label"><span class="tag__text">Медиа Сервер</span></label>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="popup-expert__range">
+							<div class="popup-expert__label">Бюджет</div>
+							<div class="popup-expert__price-range price-range">
+								<div data-total2 class="price-range__body">
+									<div class="price-range__wrapper">
+										<input data-total-from2="0" autocomplete="off" type="text" value="22500" name="form[]" class="price-range__input">
+										<span></span>
+										<input data-total-to2="223258" autocomplete="off" type="text" value="223258" name="form[]" class="price-range__input">
+									</div>
+									<div data-total-item2 id="price-range" class="price-range__range">
+										<span style="--icon-range-close: url(img/icons/close-range.svg)"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<form action="#" class="popup-expert__form form-expert">
+							<div class="form-expert__top">
+								<div class="popup-expert__label">Контактные данные</div>
+								<div data-da=".form-expert__body,479.98,2" class="form-expert__mandatory">* Обязательные поля</div>
+							</div>
+							<div class="form-expert__body">
+								<div class="form-expert__items">
+									<div class="form-expert__item">
+										<div class="form-expert__line">
+											<input autocomplete="off" type="text" name="form[]" placeholder="Ваше имя" class="form-expert__input input">
+											<span>*</span>
+										</div>
+										<div class="form-expert__line">
+											<input autocomplete="off" type="text" name="form[]" placeholder="Ваше имя" class="form-expert__input input">
+											<span>*</span>
+										</div>
+										<div class="form-expert__line">
+											<input autocomplete="off" type="text" name="form[]" placeholder="Телефон" class="form-expert__input input">
+											<span>*</span>
+										</div>
+									</div>
+									<div class="form-expert__item">
+										<textarea class="form-expert__textarea">Комментарий</textarea>
+									</div>
+								</div>
+								<button data-popup="#popup-thanks" class="form-expert__button button button_fill-blue">
+									<span class="desktop-text">Отправить</span>
+									<span class="mobile-text">Продолжить покупки</span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div> -->
 
 
 
@@ -791,7 +820,7 @@
 					<div class="popup-processors__body">
 						<aside class="popup-processors__aside aside-processors">
 							<div class="aside-processors__item">
-								<div class="aside-processors__label">Фильтры</div>
+								<div class="aside-processors__label aside-processors__label_main">Фильтры</div>
 								<div class="aside-processors__inner">
 									<div class="checkbox">
 										<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
@@ -857,6 +886,8 @@
 									</div>
 								</div>
 							</div>
+							<button aria-label="close-filter-button" class="aside-processors__close _icon-close"></button>
+							<button class="aside-processors__button button button_blue">Выбрать</button>
 						</aside>
 						<div class="popup-processors__content content-processors">
 							<div class="content-processors__filter filter-content">
@@ -877,6 +908,7 @@
 											<button>названию</button>
 										</li>
 									</ul>
+									<button class="filter-btn">Фильтры</button>
 								</div>
 								<form action="#" class="filter-content__search">
 									<input placeholder="Поиск по товарам" type="text" class="filter-content__input">
@@ -888,82 +920,203 @@
 									<div class="content-processors__image">
 										<picture><source srcset="img/processors/01.webp" type="image/webp"><img src="img/processors/01.jpg" alt="image"></picture>
 									</div>
-									<div class="content-processors__info">
-										<button type="button" class="content-processors__name _icon-info-icon">
-											Процессор AMD Ryzen 9 7950X OEM
-										</button>
+									<div class="content-processors__inner">
+										<button type="button" class="content-processors__name _icon-info-icon">Процессор AMD Ryzen 9
+											7950X OEM</button>
+										<div class="content-processors__actions">
+											<div class="content-processors__price">25 890 ₽</div>
+											<button class="content-processors__button button button_blue">Добавить</button>
+										</div>
 									</div>
-									<div class="content-processors__price">25 890 ₽</div>
-									<button class="content-processors__button button button_blue">Добавить</button>
+
+									<!-- info -->
+									<div class="detail-info">
+										<button type="button" class="detail-info__close">
+											<img src="img/icons/close.svg" alt="icon: close">
+										</button>
+										<div class="detail-info__slider swiper">
+											<div class="detail-info__wrapper swiper-wrapper">
+												<div class="detail-info__slide swiper-slide slide-detail">
+													<div class="slide-detail__image">
+														<picture><source srcset="img/processors/main-slider.webp" type="image/webp"><img src="img/processors/main-slider.jpg" alt="image"></picture>
+													</div>
+												</div>
+												<div class="detail-info__slide swiper-slide slide-detail">
+													<div class="slide-detail__image">
+														<picture><source srcset="img/testing/1300x200.webp" type="image/webp"><img src="img/testing/1300x200.jpg" alt="image"></picture>
+													</div>
+												</div>
+												<div class="detail-info__slide swiper-slide slide-detail">
+													<div class="slide-detail__image">
+														<picture><source srcset="img/testing/400x600.webp" type="image/webp"><img src="img/testing/400x600.jpg" alt="image"></picture>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+										<div class="detail-info__name">Процессор AMD Ryzen 9 7950X OEM</div>
+										<div data-tabs class="tabs">
+											<nav data-tabs-titles class="tabs__navigation">
+												<button type="button" class="tabs__title _tab-active">Характеристики</button>
+												<button type="button" class="tabs__title">Описание</button>
+											</nav>
+											<div data-tabs-body class="tabs__content">
+												<div class="tabs__body">
+													<div class="tabs__items">
+														<div class="tabs__item">
+															<div class="tabs__label">
+																Сокет
+															</div>
+															<div class="tabs__value">
+																AM5
+															</div>
+														</div>
+														<div class="tabs__item">
+															<div class="tabs__label">
+																Ядро
+															</div>
+															<div class="tabs__value">
+																RaphaeleAM5
+															</div>
+														</div>
+														<div class="tabs__item">
+															<div class="tabs__label">
+																Количество ядер
+															</div>
+															<div class="tabs__value">
+																16
+															</div>
+														</div>
+														<div class="tabs__item">
+															<div class="tabs__label">
+																Тактовая частота
+															</div>
+															<div class="tabs__value">
+																5100 Мгц
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="tabs__body">
+													<p class="tabs__text">
+														Процессор AMD Ryzen 9 7950X – мощный чипсет для игровых компьютеров и рабочих
+														станций
+														профессионального
+														уровня.
+														Обработка до 32 вычислительных потоков одновременно обеспечивает высокую
+														производительность
+														устройства
+														для молниеносного
+														запуска любых программ и комфортной работы.
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="detail-info__price-block">
+											<span class="detail-info__price">18 000 ₽</span>
+											<a href="#" class="detail-info__button button button_fill-blue">Добавить</a>
+										</div>
+									</div>
+									<!-- info -->
+
 								</div>
+
 								<div class="content-processors__item">
 									<div class="content-processors__image">
 										<picture><source srcset="img/processors/02.webp" type="image/webp"><img src="img/processors/02.jpg" alt="image"></picture>
 									</div>
-									<div class="content-processors__info">
-										<button type="button" class="content-processors__name _icon-info-icon">
-											Процессор AMD Ryzen 9 7950X OEM
-										</button>
+									<div class="content-processors__inner">
+										<button type="button" class="content-processors__name _icon-info-icon">Процессор AMD Ryzen 9
+											7950X OEM</button>
+										<div class="content-processors__actions">
+											<div class="content-processors__price">32 900 ₽</div>
+											<button class="content-processors__button button button_blue">Добавить</button>
+										</div>
 									</div>
-									<div class="content-processors__price">32 900 ₽</div>
-									<button class="content-processors__button button button_blue">Добавить</button>
 								</div>
+
 								<div class="content-processors__item">
 									<div class="content-processors__image">
 										<picture><source srcset="img/processors/03.webp" type="image/webp"><img src="img/processors/03.jpg" alt="image"></picture>
 									</div>
-									<div class="content-processors__info">
-										<button type="button" class="content-processors__name _icon-info-icon">
-											Процессор AMD Ryzen 9 7950X OEM
-										</button>
+									<div class="content-processors__inner">
+										<button type="button" class="content-processors__name _icon-info-icon">Процессор AMD Ryzen 9
+											7950X OEM</button>
+										<div class="content-processors__actions">
+											<div class="content-processors__price">26 580 ₽</div>
+											<button class="content-processors__button button button_blue">Добавить</button>
+										</div>
 									</div>
-									<div class="content-processors__price">26 580 ₽</div>
-									<button class="content-processors__button button button_blue">Добавить</button>
 								</div>
+
 								<div class="content-processors__item">
 									<div class="content-processors__image">
 										<picture><source srcset="img/processors/04.webp" type="image/webp"><img src="img/processors/04.jpg" alt="image"></picture>
 									</div>
-									<div class="content-processors__info">
-										<button type="button" class="content-processors__name _icon-info-icon">
-											Процессор AMD Ryzen 9 7950X OEM
-										</button>
+									<div class="content-processors__inner">
+										<button type="button" class="content-processors__name _icon-info-icon">Процессор AMD Ryzen 9
+											7950X OEM</button>
+										<div class="content-processors__actions">
+											<div class="content-processors__price">18 000 ₽</div>
+											<button class="content-processors__button button button_blue">Добавить</button>
+										</div>
 									</div>
-									<div class="content-processors__price">18 000 ₽</div>
-									<button class="content-processors__button button button_blue">Добавить</button>
 								</div>
+
 								<div class="content-processors__item">
 									<div class="content-processors__image">
 										<picture><source srcset="img/processors/05.webp" type="image/webp"><img src="img/processors/05.jpg" alt="image"></picture>
 									</div>
-									<div class="content-processors__info">
-										<button type="button" class="content-processors__name _icon-info-icon">
-											Процессор AMD Ryzen 9 7950X OEM
-										</button>
+									<div class="content-processors__inner">
+										<button type="button" class="content-processors__name _icon-info-icon">Процессор AMD Ryzen 9
+											7950X OEM</button>
+										<div class="content-processors__actions">
+											<div class="content-processors__price">17 580 ₽₽</div>
+											<button class="content-processors__button button button_blue">Добавить</button>
+										</div>
 									</div>
-									<div class="content-processors__price">17 580 ₽₽</div>
-									<button class="content-processors__button button button_blue">Добавить</button>
 								</div>
+
 								<div class="content-processors__item">
 									<div class="content-processors__image">
 										<picture><source srcset="img/processors/06.webp" type="image/webp"><img src="img/processors/06.jpg" alt="image"></picture>
 									</div>
-									<div class="content-processors__info">
-										<button type="button" class="content-processors__name _icon-info-icon">
-											Процессор AMD Ryzen 9 7950X OEM
-										</button>
+									<div class="content-processors__inner">
+										<button type="button" class="content-processors__name _icon-info-icon">Процессор AMD Ryzen 9
+											7950X OEM</button>
+										<div class="content-processors__actions">
+											<div class="content-processors__price">32 900 ₽</div>
+											<button class="content-processors__button button button_blue">Добавить</button>
+										</div>
 									</div>
-									<div class="content-processors__price">32 900 ₽</div>
-									<button class="content-processors__button button button_blue">Добавить</button>
 								</div>
 							</div>
+							<div class="content-processors__button-more button-more">Показать еще</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240304151158"></script>
+
+
+	<div id="popup-thanks" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close close-modal">
+					<img src="img/icons/close.svg" alt="icon: Close">
+				</button>
+				<div class="popup-thanks">
+					<h1 class="popup-thanks__title title">Спасибо</h1>
+					<p class="popup-thanks__text">Специалисты магазина совсем скоро Вам ответят и помогут.</p>
+					<div class="popup-thanks__actions">
+						<button class="popup-thanks__button button button_fill-blue">Продолжить покупки</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20240305143223"></script>
 </body>
 
 </html>
