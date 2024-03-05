@@ -2780,6 +2780,16 @@ input[type=number] {
   text-align: left;
 }
 
+
+.progress-circle circle {
+	cx: var(--half-size);
+	cy: var(--half-size);
+	r: var(--radius);
+	stroke-width: var(--stroke-width);
+	fill: none;
+	stroke-linecap: round;
+}
+
 .item-configurator__input {
   text-align: center;
   height: 3rem;
@@ -4267,3 +4277,4 @@ input[type=number] {
     border: 0.0625rem solid var(--blue);
   }
 }
+
