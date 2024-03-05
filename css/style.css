@@ -541,7 +541,6 @@ textarea {
 	stroke-linecap: round;
 }
 
-
 textarea.input {
   resize: none;
   padding: 0px 0px;
@@ -2203,6 +2202,33 @@ input[type=number] {
 
 .desktop-text {
   display: block;
+}
+
+.notification-copy {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 8px 24px 0 rgba(129, 135, 189, 0.15);
+          box-shadow: 0 8px 24px 0 rgba(129, 135, 189, 0.15);
+  background: var(--dark);
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.notification-copy span {
+  font-weight: 500;
+  color: var(--white);
 }
 
 .header {

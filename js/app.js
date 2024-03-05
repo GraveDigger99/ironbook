@@ -5998,11 +5998,11 @@
     const da = new DynamicAdapt("max");
     da.init();
     const infoName = document.querySelector(".content-processors__name");
-    infoName.addEventListener("click", (function(e) {
+    if (infoName) infoName.addEventListener("click", (function(e) {
         document.documentElement.classList.add("open-info");
     }));
     const infoClose = document.querySelector(".detail-info__close");
-    infoClose.addEventListener("click", (function(e) {
+    if (infoClose) infoClose.addEventListener("click", (function(e) {
         document.documentElement.classList.remove("open-info");
     }));
     document.addEventListener("DOMContentLoaded", (function() {
@@ -6201,12 +6201,23 @@
     initComputerBuilder();
     const filterBtnOpen = document.querySelector(".filter-btn");
     const filterBtnClose = document.querySelector(".aside-processors__close");
-    filterBtnOpen.addEventListener("click", (function(e) {
+    if (filterBtnOpen) filterBtnOpen.addEventListener("click", (function(e) {
         document.documentElement.classList.add("filter-open");
     }));
-    filterBtnClose.addEventListener("click", (function(e) {
+    if (filterBtnClose) filterBtnClose.addEventListener("click", (function(e) {
         document.documentElement.classList.remove("filter-open");
     }));
+    const copyBtn = document.querySelector(".copy-btn");
+    if (copyBtn) copyBtn.addEventListener("click", showNotification);
+    function showNotification() {
+        var notification = document.getElementById("notification");
+        notification.style.opacity = "1";
+        notification.style.visibility = "visible";
+        setTimeout((function() {
+            notification.style.opacity = "0";
+            notification.style.visibility = "hidden";
+        }), 2e3);
+    }
     window["FLS"] = false;
     isWebp();
     menuInit();
