@@ -5863,7 +5863,11 @@
             },
             breakpoints: {
                 320: {
-                    slidesPerView: 1.6,
+                    slidesPerView: 1.8,
+                    spaceBetween: 16
+                },
+                380: {
+                    slidesPerView: 2.1,
                     spaceBetween: 16
                 },
                 479: {
@@ -6169,6 +6173,7 @@
             document.querySelector(".progress-circle").style.setProperty("--progress-color", updatedColor);
             updateLinearProgressBar();
         }
+        showProgressContainer();
         function updateLinearProgressBar() {
             if (collectButtonClicked) {
                 const linearProgressBar = document.querySelector(".linear-progress-fg");
@@ -6194,8 +6199,8 @@
         document.querySelector(".collect-button").addEventListener("click", (function() {
             collectButtonClicked = true;
             updateLinearProgressBar();
-            collectButtonClicked = false;
             showProgressContainer();
+            collectButtonClicked = false;
         }));
     }
     initComputerBuilder();
