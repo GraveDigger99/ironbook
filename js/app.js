@@ -5859,7 +5859,8 @@
             autoHeight: false,
             speed: 800,
             navigation: {
-                nextEl: ".configurator__next"
+                nextEl: ".configurator__next",
+                prevEl: ".configurator__prev"
             },
             breakpoints: {
                 320: {
