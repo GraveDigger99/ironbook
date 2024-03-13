@@ -2156,8 +2156,8 @@ input[type=number] {
   width: 32px;
   border-radius: 0.9375rem;
   background-color: var(--progress-color, #fe3838);
-  -webkit-transition: width 0.8s linear 0s, background-color 0.8s linear 0s;
-  transition: width 0.8s linear 0s, background-color 0.8s linear 0s;
+  -webkit-transition: width 0.5s linear 0s, background-color 0.5s linear 0s;
+  transition: width 0.5s linear 0s, background-color 0.5s linear 0s;
 }
 
 .pin-wrapper {
