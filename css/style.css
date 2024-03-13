@@ -356,6 +356,16 @@ h6 {
   font-size: 0.75rem;
 }
 
+.progress-circle circle {
+	cx: var(--half-size);
+	cy: var(--half-size);
+	r: var(--radius);
+	stroke-width: var(--stroke-width);
+	fill: none;
+	stroke-linecap: round;
+}
+
+
 .button-more {
   border-radius: 0.25rem;
   padding: 1rem 1rem;
@@ -386,15 +396,6 @@ h6 {
 
 .delete-btn_active {
   display: block;
-}
-
-.progress-circle circle {
-	cx: var(--half-size);
-	cy: var(--half-size);
-	r: var(--radius);
-	stroke-width: var(--stroke-width);
-	fill: none;
-	stroke-linecap: round;
 }
 
 .change-btn {
@@ -2129,8 +2130,8 @@ input[type=number] {
 .linear-progress-fg {
   height: 100%;
   background-color: var(--progress-color, #fe3838);
-  -webkit-transition: width 0.8s linear 0s, background-color 0.8s linear 0s;
-  transition: width 0.8s linear 0s, background-color 0.8s linear 0s;
+  -webkit-transition: width 0.5s linear 0s, background-color 0.5s linear 0s;
+  transition: width 0.5s linear 0s, background-color 0.5s linear 0s;
 }
 
 .linear-progress-container {
