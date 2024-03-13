@@ -348,6 +348,16 @@ h6 {
   transition: all 0.2s ease 0s;
 }
 
+
+.progress-circle circle {
+	cx: var(--half-size);
+	cy: var(--half-size);
+	r: var(--radius);
+	stroke-width: var(--stroke-width);
+	fill: none;
+	stroke-linecap: round;
+}
+
 .button-add span {
   pointer-events: none;
 }
