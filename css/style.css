@@ -388,18 +388,6 @@ h6 {
   display: block;
 }
 
-
-.progress-circle circle {
-	cx: var(--half-size);
-	cy: var(--half-size);
-	r: var(--radius);
-	stroke-width: var(--stroke-width);
-	fill: none;
-	stroke-linecap: round;
-}
-
-
-
 .change-btn {
   display: -webkit-box;
   display: -ms-flexbox;
