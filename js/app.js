@@ -6011,7 +6011,6 @@
     }));
     document.addEventListener("DOMContentLoaded", (function() {
         const configurators = document.querySelectorAll(".slide-configurator");
-        console.log(configurators);
         function handleSelectButtonClick(event) {
             const configurator = event.currentTarget.closest(".slide-configurator");
             console.log(configurator);
@@ -6193,14 +6192,23 @@
         }
         document.getElementById("componentList").addEventListener("click", (function(event) {
             const target = event.target;
+            console.log(target);
             const component = target.closest(".component");
-            if (target.classList.contains("button-add") && component) toggleComponent(component); else if (target.classList.contains("delete-btn") && component) toggleComponent(component);
-        }));
-        document.querySelector(".collect-button").addEventListener("click", (function() {
-            collectButtonClicked = true;
-            updateLinearProgressBar();
-            showProgressContainer();
-            collectButtonClicked = false;
+            if (target.classList.contains("button-add") && component) {
+                toggleComponent(component);
+                updatePerformance();
+                collectButtonClicked = true;
+                updateLinearProgressBar();
+                showProgressContainer();
+                collectButtonClicked = false;
+            } else if (target.classList.contains("delete-btn") && component) {
+                toggleComponent(component);
+                updatePerformance();
+                collectButtonClicked = true;
+                updateLinearProgressBar();
+                showProgressContainer();
+                collectButtonClicked = false;
+            }
         }));
     }
     initComputerBuilder();

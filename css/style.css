@@ -356,16 +356,6 @@ h6 {
   font-size: 0.75rem;
 }
 
-.progress-circle circle {
-	cx: var(--half-size);
-	cy: var(--half-size);
-	r: var(--radius);
-	stroke-width: var(--stroke-width);
-	fill: none;
-	stroke-linecap: round;
-}
-
-
 .button-more {
   border-radius: 0.25rem;
   padding: 1rem 1rem;
@@ -418,6 +408,16 @@ h6 {
   -webkit-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
 }
+
+.progress-circle circle {
+	cx: var(--half-size);
+	cy: var(--half-size);
+	r: var(--radius);
+	stroke-width: var(--stroke-width);
+	fill: none;
+	stroke-linecap: round;
+}
+
 
 .collect-btn {
   border-radius: 0.25rem;
@@ -1065,6 +1065,7 @@ body::after {
   transition: visibility 0.8s ease 0s;
   visibility: hidden;
   pointer-events: none;
+  height: 100vh;
 }
 
 .popup_show {
@@ -1092,7 +1093,6 @@ body::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -1102,6 +1102,8 @@ body::after {
       -ms-flex-pack: center;
           justify-content: center;
   align-items: center;
+  position: relative;
+  height: 100%;
 }
 
 .popup__content {
@@ -1118,7 +1120,27 @@ body::after {
   width: 100%;
   max-width: 76rem;
   overflow: hidden;
+  overflow-y: auto;
+  position: relative;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  -webkit-overflow-scrolling: touch;
+  /* iOS momentum scrolling */
   border-radius: 0.625rem;
+}
+
+.popup__content ::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-open .popup__content {
+  overflow: hidden;
+}
+
+.open-info .popup__content {
+  overflow: hidden;
 }
 
 .popup__content::after {
@@ -1422,6 +1444,7 @@ body::after {
   -webkit-transition: right 0.5s ease 0s;
   transition: right 0.5s ease 0s;
   z-index: 2;
+  overflow: auto;
 }
 
 .open-info .detail-info {
@@ -2156,8 +2179,8 @@ input[type=number] {
   width: 32px;
   border-radius: 0.9375rem;
   background-color: var(--progress-color, #fe3838);
-  -webkit-transition: width 0.5s linear 0s, background-color 0.5s linear 0s;
-  transition: width 0.5s linear 0s, background-color 0.5s linear 0s;
+  -webkit-transition: width 0.8s linear 0s, background-color 0.8s linear 0s;
+  transition: width 0.8s linear 0s, background-color 0.8s linear 0s;
 }
 
 .pin-wrapper {
@@ -3676,6 +3699,7 @@ input[type=number] {
     padding: 1.5rem;
     -webkit-transition: left 0.5s ease 0s;
     transition: left 0.5s ease 0s;
+    overflow: auto;
   }
 
   .filter-open .aside-processors {
