@@ -5,7 +5,7 @@
 	<title>HomePage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240313201706">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240417212642">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -323,7 +323,8 @@
 										</div>
 										<div class="item-configurator__body">
 											<div class="item-configurator__product">
-												<div class="item-configurator__name-product">AMD Ryzen 9 7950X OEM</div>
+												<button type="button" class="item-configurator__name-product">AMD Ryzen 9
+													7950X OEM</button>
 												<p class="item-configurator__descr-product">
 													AM5, 16-ядерный, 4500 МГц, , L3 - 64 Мб, Radeon Graphics, 5 нм, 170 Вт
 												</p>
@@ -367,7 +368,7 @@
 										</div>
 										<div class="item-configurator__body">
 											<div class="item-configurator__product">
-												<div class="item-configurator__name-product">GeForce RTX 3060 Palit Dual 12Gb</div>
+												<button type="button" class="item-configurator__name-product">GeForce RTX 3060 Palit Dual 12Gb</button>
 												<p class="item-configurator__descr-product">
 													PCI-E 4.0, ядро - 1320 МГц, Boost - 1777 МГц, память - 12 Гб GDDR6, 15000 МГц,
 												</p>
@@ -397,7 +398,7 @@
 										</div>
 										<div class="item-configurator__body">
 											<div class="item-configurator__product">
-												<div class="item-configurator__name-product">GeForce RTX 3060 Palit Dual 12Gb</div>
+												<button type="button" data-target="infoBlock1" class="item-configurator__name-product">GeForce RTX 3060 Palit Dual 12Gb</button>
 												<p class="item-configurator__descr-product">
 													PCI-E 4.0, ядро - 1320 МГц, Boost - 1777 МГц, память - 12 Гб GDDR6, 15000 МГц,
 												</p>
@@ -427,7 +428,7 @@
 										</div>
 										<div class="item-configurator__body">
 											<div class="item-configurator__product">
-												<div class="item-configurator__name-product">GeForce RTX 3060 Palit Dual 12Gb</div>
+												<button type="button" class="item-configurator__name-product">GeForce RTX 3060 Palit Dual 12Gb</button>
 												<p class="item-configurator__descr-product">
 													PCI-E 4.0, ядро - 1320 МГц, Boost - 1777 МГц, память - 12 Гб GDDR6, 15000 МГц,
 												</p>
@@ -477,6 +478,101 @@
 											</button>
 										</div>
 									</div>
+
+									<!-- Modals -->
+									<!-- info -->
+									<div data-block='infoBlock1' id="detail-info" class="detail-info">
+										<button type="button" class="detail-info__close">
+											<img src="img/icons/close.svg" alt="icon: close">
+										</button>
+										<div class="detail-info__slider swiper">
+											<div class="detail-info__wrapper swiper-wrapper">
+												<div class="detail-info__slide swiper-slide slide-detail">
+													<div class="slide-detail__image">
+														<picture><source srcset="img/processors/main-slider.webp" type="image/webp"><img src="img/processors/main-slider.jpg" alt="image"></picture>
+													</div>
+												</div>
+												<div class="detail-info__slide swiper-slide slide-detail">
+													<div class="slide-detail__image">
+														<picture><source srcset="img/testing/1300x200.webp" type="image/webp"><img src="img/testing/1300x200.jpg" alt="image"></picture>
+													</div>
+												</div>
+												<div class="detail-info__slide swiper-slide slide-detail">
+													<div class="slide-detail__image">
+														<picture><source srcset="img/testing/400x600.webp" type="image/webp"><img src="img/testing/400x600.jpg" alt="image"></picture>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+										<div class="detail-info__name">Процессор AMD Ryzen 9 7950X OEM</div>
+										<div data-tabs class="tabs">
+											<nav data-tabs-titles class="tabs__navigation">
+												<button type="button" class="tabs__title _tab-active">Характеристики</button>
+												<button type="button" class="tabs__title">Описание</button>
+											</nav>
+											<div data-tabs-body class="tabs__content">
+												<div class="tabs__body">
+													<div class="tabs__items">
+														<div class="tabs__item">
+															<div class="tabs__label">
+																Сокет
+															</div>
+															<div class="tabs__value">
+																AM5
+															</div>
+														</div>
+														<div class="tabs__item">
+															<div class="tabs__label">
+																Ядро
+															</div>
+															<div class="tabs__value">
+																RaphaeleAM5
+															</div>
+														</div>
+														<div class="tabs__item">
+															<div class="tabs__label">
+																Количество ядер
+															</div>
+															<div class="tabs__value">
+																16
+															</div>
+														</div>
+														<div class="tabs__item">
+															<div class="tabs__label">
+																Тактовая частота
+															</div>
+															<div class="tabs__value">
+																5100 Мгц
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="tabs__body">
+													<p class="tabs__text">
+														Процессор AMD Ryzen 9 7950X – мощный чипсет для игровых компьютеров и
+														рабочих
+														станций
+														профессионального
+														уровня.
+														Обработка до 32 вычислительных потоков одновременно обеспечивает
+														высокую
+														производительность
+														устройства
+														для молниеносного
+														запуска любых программ и комфортной работы.
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="detail-info__price-block">
+											<span class="detail-info__price">18 000 ₽</span>
+											<a href="#" class="detail-info__button button button_fill-blue">Добавить</a>
+										</div>
+									</div>
+									<!-- info -->
+									<!-- Modals -->
+
 								</div>
 								<button class="item-configurator__button-more button-more">Показать
 									дополнительные комплектующие</button>
@@ -625,6 +721,7 @@
 				</svg>
 				<span>Ссылка скопирована</span>
 			</div>
+			<div class="overlay"></div>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -959,7 +1056,7 @@
 								<div class="filter-content__top">
 									<div class="filter-content__label">Сортировать по:</div>
 									<ul class="filter-content__list">
-										<li class="filter-content__item filter-content__item_popular">
+										<li class="filter-content__item">
 											<button>популярности</button>
 											<img src="img/icons/icon-down.svg" alt="icon: down">
 										</li>
@@ -973,6 +1070,13 @@
 											<button>названию</button>
 										</li>
 									</ul>
+									<select name="form[]" class="form">
+										<option value="1" selected>Популярности</option>
+										<option value="2">Сначала дешевле</option>
+										<option value="3">Сначала дороже</option>
+										<option value="4">Новинки</option>
+										<option value="5">Снижена цена</option>
+									</select>
 									<button class="filter-btn">Фильтры</button>
 								</div>
 								<form action="#" class="filter-content__search">
@@ -983,10 +1087,10 @@
 							<div class="content-processors__items">
 								<div class="content-processors__item">
 									<div class="content-processors__image">
-										<picture><source srcset="img/processors/01.webp" type="image/webp"><img src="img/processors/01.jpg" alt="image"></picture>
+										<picture><source srcset="img/processors/01.webp" type="image/webp"><img src="img/processors/01.png" alt="image"></picture>
 									</div>
 									<div class="content-processors__inner">
-										<button type="button" class="content-processors__name _icon-info-icon">Процессор AMD Ryzen 9
+										<button data-target="infoBlock1" type="button" class="content-processors__name _icon-info-icon">Процессор AMD Ryzen 9
 											7950X OEM</button>
 										<div class="content-processors__actions">
 											<div class="content-processors__price">25 890 ₽</div>
@@ -994,101 +1098,11 @@
 										</div>
 									</div>
 
-									<!-- info -->
-									<div class="detail-info">
-										<button type="button" class="detail-info__close">
-											<img src="img/icons/close.svg" alt="icon: close">
-										</button>
-										<div class="detail-info__slider swiper">
-											<div class="detail-info__wrapper swiper-wrapper">
-												<div class="detail-info__slide swiper-slide slide-detail">
-													<div class="slide-detail__image">
-														<picture><source srcset="img/processors/main-slider.webp" type="image/webp"><img src="img/processors/main-slider.jpg" alt="image"></picture>
-													</div>
-												</div>
-												<div class="detail-info__slide swiper-slide slide-detail">
-													<div class="slide-detail__image">
-														<picture><source srcset="img/testing/1300x200.webp" type="image/webp"><img src="img/testing/1300x200.jpg" alt="image"></picture>
-													</div>
-												</div>
-												<div class="detail-info__slide swiper-slide slide-detail">
-													<div class="slide-detail__image">
-														<picture><source srcset="img/testing/400x600.webp" type="image/webp"><img src="img/testing/400x600.jpg" alt="image"></picture>
-													</div>
-												</div>
-											</div>
-											<div class="swiper-pagination"></div>
-										</div>
-										<div class="detail-info__name">Процессор AMD Ryzen 9 7950X OEM</div>
-										<div data-tabs class="tabs">
-											<nav data-tabs-titles class="tabs__navigation">
-												<button type="button" class="tabs__title _tab-active">Характеристики</button>
-												<button type="button" class="tabs__title">Описание</button>
-											</nav>
-											<div data-tabs-body class="tabs__content">
-												<div class="tabs__body">
-													<div class="tabs__items">
-														<div class="tabs__item">
-															<div class="tabs__label">
-																Сокет
-															</div>
-															<div class="tabs__value">
-																AM5
-															</div>
-														</div>
-														<div class="tabs__item">
-															<div class="tabs__label">
-																Ядро
-															</div>
-															<div class="tabs__value">
-																RaphaeleAM5
-															</div>
-														</div>
-														<div class="tabs__item">
-															<div class="tabs__label">
-																Количество ядер
-															</div>
-															<div class="tabs__value">
-																16
-															</div>
-														</div>
-														<div class="tabs__item">
-															<div class="tabs__label">
-																Тактовая частота
-															</div>
-															<div class="tabs__value">
-																5100 Мгц
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="tabs__body">
-													<p class="tabs__text">
-														Процессор AMD Ryzen 9 7950X – мощный чипсет для игровых компьютеров и рабочих
-														станций
-														профессионального
-														уровня.
-														Обработка до 32 вычислительных потоков одновременно обеспечивает высокую
-														производительность
-														устройства
-														для молниеносного
-														запуска любых программ и комфортной работы.
-													</p>
-												</div>
-											</div>
-										</div>
-										<div class="detail-info__price-block">
-											<span class="detail-info__price">18 000 ₽</span>
-											<a href="#" class="detail-info__button button button_fill-blue">Добавить</a>
-										</div>
-									</div>
-									<!-- info -->
-
 								</div>
 
 								<div class="content-processors__item">
 									<div class="content-processors__image">
-										<picture><source srcset="img/processors/02.webp" type="image/webp"><img src="img/processors/02.jpg" alt="image"></picture>
+										<picture><source srcset="img/processors/02.webp" type="image/webp"><img src="img/processors/02.png" alt="image"></picture>
 									</div>
 									<div class="content-processors__inner">
 										<button type="button" class="content-processors__name _icon-info-icon">Процессор AMD Ryzen 9
@@ -1102,7 +1116,7 @@
 
 								<div class="content-processors__item">
 									<div class="content-processors__image">
-										<picture><source srcset="img/processors/03.webp" type="image/webp"><img src="img/processors/03.jpg" alt="image"></picture>
+										<picture><source srcset="img/processors/03.webp" type="image/webp"><img src="img/processors/03.png" alt="image"></picture>
 									</div>
 									<div class="content-processors__inner">
 										<button type="button" class="content-processors__name _icon-info-icon">Процессор AMD Ryzen 9
@@ -1116,7 +1130,7 @@
 
 								<div class="content-processors__item">
 									<div class="content-processors__image">
-										<picture><source srcset="img/processors/04.webp" type="image/webp"><img src="img/processors/04.jpg" alt="image"></picture>
+										<picture><source srcset="img/processors/04.webp" type="image/webp"><img src="img/processors/04.png" alt="image"></picture>
 									</div>
 									<div class="content-processors__inner">
 										<button type="button" class="content-processors__name _icon-info-icon">Процессор AMD Ryzen 9
@@ -1130,7 +1144,7 @@
 
 								<div class="content-processors__item">
 									<div class="content-processors__image">
-										<picture><source srcset="img/processors/05.webp" type="image/webp"><img src="img/processors/05.jpg" alt="image"></picture>
+										<picture><source srcset="img/processors/05.webp" type="image/webp"><img src="img/processors/05.png" alt="image"></picture>
 									</div>
 									<div class="content-processors__inner">
 										<button type="button" class="content-processors__name _icon-info-icon">Процессор AMD Ryzen 9
@@ -1144,7 +1158,7 @@
 
 								<div class="content-processors__item">
 									<div class="content-processors__image">
-										<picture><source srcset="img/processors/06.webp" type="image/webp"><img src="img/processors/06.jpg" alt="image"></picture>
+										<picture><source srcset="img/processors/06.webp" type="image/webp"><img src="img/processors/06.png" alt="image"></picture>
 									</div>
 									<div class="content-processors__inner">
 										<button type="button" class="content-processors__name _icon-info-icon">Процессор AMD Ryzen 9
@@ -1236,7 +1250,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240313201706"></script>
+	<script src="js/app.min.js?_v=20240417212642"></script>
 </body>
 
 </html>
