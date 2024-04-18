@@ -437,25 +437,27 @@
         }
         eventsPopup() {
             document.addEventListener("click", function(e) {
-                const buttonOpen = e.target.closest(`[${this.options.attributeOpenButton}]`);
-                if (buttonOpen) {
-                    e.preventDefault();
-                    this._dataValue = buttonOpen.getAttribute(this.options.attributeOpenButton) ? buttonOpen.getAttribute(this.options.attributeOpenButton) : "error";
-                    this.youTubeCode = buttonOpen.getAttribute(this.options.youtubeAttribute) ? buttonOpen.getAttribute(this.options.youtubeAttribute) : null;
-                    if (this._dataValue !== "error") {
-                        if (!this.isOpen) this.lastFocusEl = buttonOpen;
-                        this.targetOpen.selector = `${this._dataValue}`;
-                        this._selectorOpen = true;
-                        this.open();
+                if (!e.target.closest(".item-configurator__body") && !e.target.closest(".item-configurator__actions")) {
+                    const buttonOpen = e.target.closest(`[${this.options.attributeOpenButton}]`);
+                    if (buttonOpen) {
+                        e.preventDefault();
+                        this._dataValue = buttonOpen.getAttribute(this.options.attributeOpenButton) ? buttonOpen.getAttribute(this.options.attributeOpenButton) : "error";
+                        this.youTubeCode = buttonOpen.getAttribute(this.options.youtubeAttribute) ? buttonOpen.getAttribute(this.options.youtubeAttribute) : null;
+                        if (this._dataValue !== "error") {
+                            if (!this.isOpen) this.lastFocusEl = buttonOpen;
+                            this.targetOpen.selector = `${this._dataValue}`;
+                            this._selectorOpen = true;
+                            this.open();
+                            return;
+                        } else this.popupLogging(`Ой ой, не заполнен атрибут у ${buttonOpen.classList}`);
                         return;
-                    } else this.popupLogging(`Ой ой, не заполнен атрибут у ${buttonOpen.classList}`);
-                    return;
-                }
-                const buttonClose = e.target.closest(`[${this.options.attributeCloseButton}]`);
-                if (buttonClose) {
-                    e.preventDefault();
-                    this.close();
-                    return;
+                    }
+                    const buttonClose = e.target.closest(`[${this.options.attributeCloseButton}]`);
+                    if (buttonClose) {
+                        e.preventDefault();
+                        this.close();
+                        return;
+                    }
                 }
             }.bind(this));
             if (this.options.hashSettings.goHash) {
@@ -6373,6 +6375,7 @@
     da.init();
     const showInfoBlock = e => {
         let targetElement = e.target;
+        console.log(targetElement);
         if (targetElement == targetElement.closest("[data-target]")) {
             let targetId = targetElement.dataset.target;
             let block = document.querySelector(`[data-block = "${targetId}"]`);

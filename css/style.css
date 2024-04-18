@@ -332,6 +332,18 @@ h6 {
   color: var(--white);
 }
 
+
+
+.progress-circle circle {
+	cx: var(--half-size);
+	cy: var(--half-size);
+	r: var(--radius);
+	stroke-width: var(--stroke-width);
+	fill: none;
+	stroke-linecap: round;
+}
+
+
 .button-add {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -355,15 +367,6 @@ h6 {
 .button-add::before {
   font-size: 0.75rem;
 }
-.progress-circle circle {
-	cx: var(--half-size);
-	cy: var(--half-size);
-	r: var(--radius);
-	stroke-width: var(--stroke-width);
-	fill: none;
-	stroke-linecap: round;
-}
-
 
 .button-more {
   border-radius: 0.25rem;
@@ -679,6 +682,7 @@ textarea.input {
 }
 
 .select {
+  display: none;
   position: relative;
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
@@ -2917,6 +2921,9 @@ input[type=number] {
 }
 
 .item-configurator {
+  display: block;
+  cursor: pointer;
+  z-index: 1;
   padding: 2rem 1.5rem;
   border: 0.0625rem solid var(--light-grey-outline);
   border-radius: 0.25rem;
@@ -2959,6 +2966,10 @@ input[type=number] {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 2rem;
+  position: relative;
+  z-index: 10;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
 }
 
 .item-configurator__column_type {
@@ -3044,6 +3055,7 @@ input[type=number] {
 }
 
 .item-configurator__product {
+  pointer-events: none;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -3053,8 +3065,6 @@ input[type=number] {
   font-weight: 500;
   line-height: 143%;
   display: inline-block;
-  -webkit-transition: color 0.3s ease 0s;
-  transition: color 0.3s ease 0s;
   color: var(--dark);
 }
 
@@ -3861,6 +3871,10 @@ input[type=number] {
     background: url("../img/icons/check-icon.svg") center center no-repeat;
   }
 
+  .select {
+    display: block;
+  }
+
   .popup__content {
     padding: 1.5rem;
   }
@@ -4497,6 +4511,10 @@ input[type=number] {
     background-color: var(--light-grey);
   }
 
+  .item-configurator__body:hover .item-configurator__name-product {
+    color: var(--blue);
+  }
+
   .item-configurator__button:hover {
     background: var(--blue);
     color: var(--white);
@@ -4504,9 +4522,5 @@ input[type=number] {
 
   .item-configurator__input:hover {
     border: 0.0625rem solid var(--blue);
-  }
-
-  .item-configurator__name-product:hover {
-    color: var(--blue);
   }
 }
