@@ -6397,6 +6397,15 @@
     };
     document.addEventListener("click", showInfoBlock);
     const infoClose = document.querySelector(".detail-info__close");
+    const parentBlock = document.querySelector(".popup__content_test");
+    const infoBlock = document.querySelector(".detail-info");
+    const testOverlay = document.querySelector(".test-overlay");
+    parentBlock.addEventListener("scroll", (() => {
+        let scrollDistance = parentBlock.scrollTop;
+        infoBlock.style.top = `${scrollDistance}px`;
+        testOverlay.style.top = `${scrollDistance}px`;
+        console.log("Scroll distance:", scrollDistance);
+    }));
     if (infoClose) infoClose.addEventListener("click", (function(e) {
         document.documentElement.classList.remove("open-info");
         document.querySelector(".overlay").style.opacity = "0";
